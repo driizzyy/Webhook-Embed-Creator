@@ -1,0 +1,50 @@
+# GitHub Pages Configuration for Discord Webhook Embed Creator
+
+# Enable GitHub Pages
+github:
+  pages:
+    enabled: true
+    source: 
+      branch: main
+      path: /
+
+# Custom domain (optional)
+# domain: your-custom-domain.com
+
+# Site settings
+title: "Discord Webhook Embed Creator"
+description: "A professional Discord embed creator with real-time preview and webhook integration"
+author: "driizzyy"
+url: "https://driizzyy.github.io"
+baseurl: "/Webhook-Embed-Creator"
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+plugins:
+  - jekyll-sitemap
+  - jekyll-feed
+
+# Exclude files from processing
+exclude:
+  - README.md
+  - DEVELOPMENT.md
+  - LICENSE
+  - "*.md"
+
+# Include files in build
+include:
+  - index.html
+  - src/
+
+# SEO and social media
+twitter:
+  username: driizzyy
+
+social:
+  name: driizzyy
+  links:
+    - https://github.com/driizzyy
+
+# Analytics (optional)
+# google_analytics: UA-XXXXXXXXX-X
