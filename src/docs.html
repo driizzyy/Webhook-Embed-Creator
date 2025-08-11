@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentation | Discord Webhook Embed Creator</title>
+    <meta name="description" content="Complete guide to creating professional Discord embeds with our advanced embed creator.">
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/docs.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+</head>
+<body class="docs-body">
+    <!-- Navigation -->
+    <nav class="navbar docs-nav">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="../index.html">
+                    <i class="fab fa-discord"></i>
+                    <span>Embed Creator</span>
+                </a>
+            </div>
+            <div class="nav-links">
+                <a href="../index.html" class="nav-link">Home</a>
+                <a href="creator.html" class="nav-link">Creator</a>
+                <a href="docs.html" class="nav-link active">Docs</a>
+                <a href="examples.html" class="nav-link">Examples</a>
+                <a href="api.html" class="nav-link">API</a>
+            </div>
+            <div class="nav-actions">
+                <button class="theme-toggle" id="theme-toggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <a href="https://github.com/driizzyy/Webhook-Embed-Creator" target="_blank" class="btn btn-primary">
+                    <i class="fab fa-github"></i>
+                    GitHub
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Docs Container -->
+    <div class="docs-container">
+        <!-- Sidebar -->
+        <aside class="docs-sidebar">
+            <div class="sidebar-header">
+                <h3><i class="fas fa-book"></i> Documentation</h3>
+                <div class="search-container">
+                    <input type="text" id="docs-search" placeholder="Search docs...">
+                    <i class="fas fa-search"></i>
+                </div>
+            </div>
+            
+            <nav class="docs-nav-menu">
+                <div class="nav-section">
+                    <h4>Getting Started</h4>
+                    <ul>
+                        <li><a href="#overview" class="nav-item active">Overview</a></li>
+                        <li><a href="#quick-start" class="nav-item">Quick Start</a></li>
+                        <li><a href="#installation" class="nav-item">Installation</a></li>
+                        <li><a href="#first-embed" class="nav-item">Your First Embed</a></li>
+                    </ul>
+                </div>
+
+                <div class="nav-section">
+                    <h4>Discord Fundamentals</h4>
+                    <ul>
+                        <li><a href="#webhooks" class="nav-item">Understanding Webhooks</a></li>
+                        <li><a href="#embed-anatomy" class="nav-item">Embed Anatomy</a></li>
+                        <li><a href="#discord-limits" class="nav-item">Discord Limits</a></li>
+                        <li><a href="#formatting" class="nav-item">Text Formatting</a></li>
+                    </ul>
+                </div>
+
+                <div class="nav-section">
+                    <h4>Embed Creator</h4>
+                    <ul>
+                        <li><a href="#interface" class="nav-item">Interface Overview</a></li>
+                        <li><a href="#basic-setup" class="nav-item">Basic Setup</a></li>
+                        <li><a href="#customization" class="nav-item">Customization</a></li>
+                        <li><a href="#fields-management" class="nav-item">Fields Management</a></li>
+                        <li><a href="#media-handling" class="nav-item">Media Handling</a></li>
+                    </ul>
+                </div>
+
+                <div class="nav-section">
+                    <h4>Advanced Features</h4>
+                    <ul>
+                        <li><a href="#templates" class="nav-item">Template System</a></li>
+                        <li><a href="#json-export" class="nav-item">JSON Export</a></li>
+                        <li><a href="#automation" class="nav-item">Automation</a></li>
+                        <li><a href="#best-practices" class="nav-item">Best Practices</a></li>
+                    </ul>
+                </div>
+
+                <div class="nav-section">
+                    <h4>Integration</h4>
+                    <ul>
+                        <li><a href="#bot-integration" class="nav-item">Bot Integration</a></li>
+                        <li><a href="#api-usage" class="nav-item">API Usage</a></li>
+                        <li><a href="#webhook-management" class="nav-item">Webhook Management</a></li>
+                        <li><a href="#security" class="nav-item">Security</a></li>
+                    </ul>
+                </div>
+
+                <div class="nav-section">
+                    <h4>Troubleshooting</h4>
+                    <ul>
+                        <li><a href="#common-issues" class="nav-item">Common Issues</a></li>
+                        <li><a href="#error-handling" class="nav-item">Error Handling</a></li>
+                        <li><a href="#debugging" class="nav-item">Debugging</a></li>
+                        <li><a href="#support" class="nav-item">Getting Support</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="docs-content">
+            <!-- Overview Section -->
+            <section id="overview" class="docs-section">
+                <div class="section-header">
+                    <h1 class="section-title">Documentation Overview</h1>
+                    <p class="section-subtitle">Master the art of Discord embed creation with our comprehensive guide</p>
+                </div>
+
+                <div class="content-grid">
+                    <div class="feature-highlight">
+                        <div class="highlight-icon">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <h3>Professional Embeds</h3>
+                        <p>Create stunning Discord embeds that stand out with advanced customization options and real-time preview.</p>
+                    </div>
+
+                    <div class="feature-highlight">
+                        <div class="highlight-icon">
+                            <i class="fas fa-cogs"></i>
+                        </div>
+                        <h3>Advanced Tools</h3>
+                        <p>Leverage powerful features like template management, JSON export, and webhook integration.</p>
+                    </div>
+
+                    <div class="feature-highlight">
+                        <div class="highlight-icon">
+                            <i class="fas fa-book-open"></i>
+                        </div>
+                        <h3>Complete Guide</h3>
+                        <p>From basic concepts to advanced techniques, this documentation covers everything you need to know.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Quick Start Section -->
+            <section id="quick-start" class="docs-section">
+                <h2 class="section-title">Quick Start Guide</h2>
+                
+                <div class="quick-start-steps">
+                    <div class="step-card">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h3>Get Your Webhook URL</h3>
+                            <p>Create a webhook in your Discord server settings and copy the URL.</p>
+                            <div class="code-block">
+                                <code>https://discord.com/api/webhooks/123456789/your-webhook-token</code>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="step-card">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h3>Open the Creator</h3>
+                            <p>Navigate to the embed creator and paste your webhook URL.</p>
+                            <a href="creator.html" class="step-button">
+                                <i class="fas fa-external-link-alt"></i>
+                                Open Creator
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="step-card">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h3>Design Your Embed</h3>
+                            <p>Customize title, description, colors, fields, and media with real-time preview.</p>
+                        </div>
+                    </div>
+
+                    <div class="step-card">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h3>Send to Discord</h3>
+                            <p>Click "Send to Discord" to post your embed instantly to your server.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Webhooks Section -->
+            <section id="webhooks" class="docs-section">
+                <h2 class="section-title">Understanding Discord Webhooks</h2>
+                
+                <div class="info-box info">
+                    <i class="fas fa-info-circle"></i>
+                    <div>
+                        <h4>What are Webhooks?</h4>
+                        <p>Webhooks are HTTP endpoints that allow external applications to send messages to Discord channels without a bot.</p>
+                    </div>
+                </div>
+
+                <h3>Creating a Webhook</h3>
+                <ol class="docs-list">
+                    <li>Go to your Discord server settings</li>
+                    <li>Navigate to <strong>Integrations</strong> → <strong>Webhooks</strong></li>
+                    <li>Click <strong>Create Webhook</strong></li>
+                    <li>Configure the webhook name and channel</li>
+                    <li>Copy the webhook URL</li>
+                </ol>
+
+                <div class="warning-box">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <div>
+                        <h4>Security Warning</h4>
+                        <p>Never share your webhook URL publicly. Anyone with the URL can send messages to your Discord channel.</p>
+                    </div>
+                </div>
+
+                <h3>Webhook URL Format</h3>
+                <div class="code-block">
+                    <pre><code class="language-javascript">// Standard webhook URL format
+https://discord.com/api/webhooks/{webhook.id}/{webhook.token}
+
+// Example
+https://discord.com/api/webhooks/123456789012345678/AbCdEfGhIjKlMnOpQrStUvWxYz1234567890</code></pre>
+                </div>
+            </section>
+
+            <!-- Embed Anatomy Section -->
+            <section id="embed-anatomy" class="docs-section">
+                <h2 class="section-title">Discord Embed Anatomy</h2>
+                
+                <div class="embed-anatomy-visual">
+                    <div class="anatomy-embed">
+                        <div class="anatomy-part" data-part="author">
+                            <div class="part-label">Author</div>
+                            <div class="embed-author-demo">
+                                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20'%3E%3Crect fill='%235865f2' width='20' height='20' rx='10'/%3E%3C/svg%3E" alt="Author Icon">
+                                <span>Author Name</span>
+                            </div>
+                        </div>
+                        
+                        <div class="anatomy-part" data-part="title">
+                            <div class="part-label">Title</div>
+                            <div class="embed-title-demo">Embed Title</div>
+                        </div>
+                        
+                        <div class="anatomy-part" data-part="description">
+                            <div class="part-label">Description</div>
+                            <div class="embed-description-demo">This is the embed description where you can add detailed information about your content.</div>
+                        </div>
+                        
+                        <div class="anatomy-part" data-part="fields">
+                            <div class="part-label">Fields</div>
+                            <div class="embed-fields-demo">
+                                <div class="field-demo">
+                                    <strong>Field Name</strong><br>
+                                    Field Value
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="anatomy-part" data-part="footer">
+                            <div class="part-label">Footer</div>
+                            <div class="embed-footer-demo">
+                                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16'%3E%3Crect fill='%235865f2' width='16' height='16' rx='8'/%3E%3C/svg%3E" alt="Footer Icon">
+                                <span>Footer Text • Today at 12:00 PM</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="anatomy-thumbnail">
+                        <div class="part-label">Thumbnail</div>
+                        <div class="thumbnail-demo"></div>
+                    </div>
+                </div>
+
+                <h3>Embed Structure</h3>
+                <div class="code-block">
+                    <pre><code class="language-json">{
+  "title": "Embed Title",
+  "description": "Embed description with **formatting** support",
+  "color": 5814015,
+  "author": {
+    "name": "Author Name",
+    "url": "https://example.com",
+    "icon_url": "https://example.com/icon.png"
+  },
+  "thumbnail": {
+    "url": "https://example.com/thumbnail.png"
+  },
+  "fields": [
+    {
+      "name": "Field Name",
+      "value": "Field Value",
+      "inline": true
+    }
+  ],
+  "image": {
+    "url": "https://example.com/image.png"
+  },
+  "footer": {
+    "text": "Footer Text",
+    "icon_url": "https://example.com/footer-icon.png"
+  },
+  "timestamp": "2025-08-10T12:00:00.000Z"
+}</code></pre>
+                </div>
+            </section>
+
+            <!-- Discord Limits Section -->
+            <section id="discord-limits" class="docs-section">
+                <h2 class="section-title">Discord Limits & Guidelines</h2>
+                
+                <div class="limits-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Element</th>
+                                <th>Character Limit</th>
+                                <th>Additional Notes</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Title</strong></td>
+                                <td>256</td>
+                                <td>Main embed title</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Description</strong></td>
+                                <td>4,096</td>
+                                <td>Supports markdown formatting</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Field Name</strong></td>
+                                <td>256</td>
+                                <td>Per field limit</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Field Value</strong></td>
+                                <td>1,024</td>
+                                <td>Per field limit</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Footer Text</strong></td>
+                                <td>2,048</td>
+                                <td>Footer content</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Author Name</strong></td>
+                                <td>256</td>
+                                <td>Author display name</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Total Fields</strong></td>
+                                <td>25</td>
+                                <td>Maximum number of fields</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Total Characters</strong></td>
+                                <td>6,000</td>
+                                <td>Sum of all text content</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="info-box warning">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <div>
+                        <h4>Rate Limits</h4>
+                        <p>Discord webhooks are limited to 30 requests per minute. Exceeding this limit will result in temporary blocking.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Text Formatting Section -->
+            <section id="formatting" class="docs-section">
+                <h2 class="section-title">Text Formatting Guide</h2>
+                
+                <div class="formatting-examples">
+                    <div class="format-card">
+                        <h3>Basic Formatting</h3>
+                        <div class="format-example">
+                            <div class="format-input">
+                                <code>**bold text**</code>
+                            </div>
+                            <div class="format-output">
+                                <strong>bold text</strong>
+                            </div>
+                        </div>
+                        <div class="format-example">
+                            <div class="format-input">
+                                <code>*italic text*</code>
+                            </div>
+                            <div class="format-output">
+                                <em>italic text</em>
+                            </div>
+                        </div>
+                        <div class="format-example">
+                            <div class="format-input">
+                                <code>__underlined text__</code>
+                            </div>
+                            <div class="format-output">
+                                <u>underlined text</u>
+                            </div>
+                        </div>
+                        <div class="format-example">
+                            <div class="format-input">
+                                <code>~~strikethrough~~</code>
+                            </div>
+                            <div class="format-output">
+                                <del>strikethrough</del>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="format-card">
+                        <h3>Code Formatting</h3>
+                        <div class="format-example">
+                            <div class="format-input">
+                                <code>`inline code`</code>
+                            </div>
+                            <div class="format-output">
+                                <code>inline code</code>
+                            </div>
+                        </div>
+                        <div class="format-example">
+                            <div class="format-input">
+                                <code>```<br>code block<br>```</code>
+                            </div>
+                            <div class="format-output">
+                                <pre><code>code block</code></pre>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="format-card">
+                        <h3>Links & Mentions</h3>
+                        <div class="format-example">
+                            <div class="format-input">
+                                <code>[link text](https://example.com)</code>
+                            </div>
+                            <div class="format-output">
+                                <a href="#">link text</a>
+                            </div>
+                        </div>
+                        <div class="format-example">
+                            <div class="format-input">
+                                <code>&lt;@123456789&gt;</code>
+                            </div>
+                            <div class="format-output">
+                                <span class="mention">@user</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Interface Overview Section -->
+            <section id="interface" class="docs-section">
+                <h2 class="section-title">Interface Overview</h2>
+                
+                <div class="interface-tour">
+                    <div class="tour-section">
+                        <h3><i class="fas fa-sidebar"></i> Sidebar Controls</h3>
+                        <p>The left sidebar contains all embed configuration options:</p>
+                        <ul>
+                            <li><strong>Webhook Settings</strong> - URL, username, and avatar configuration</li>
+                            <li><strong>Message Content</strong> - Optional text message above the embed</li>
+                            <li><strong>Embed Configuration</strong> - Title, description, URL, and color</li>
+                            <li><strong>Author Section</strong> - Author name, URL, and icon</li>
+                            <li><strong>Media</strong> - Thumbnail and main image settings</li>
+                            <li><strong>Fields</strong> - Dynamic field management</li>
+                            <li><strong>Footer</strong> - Footer text, icon, and timestamp</li>
+                        </ul>
+                    </div>
+
+                    <div class="tour-section">
+                        <h3><i class="fas fa-eye"></i> Live Preview</h3>
+                        <p>The right panel shows a real-time Discord preview:</p>
+                        <ul>
+                            <li><strong>Authentic Appearance</strong> - Exactly how it appears in Discord</li>
+                            <li><strong>Theme Toggle</strong> - Switch between light and dark Discord themes</li>
+                            <li><strong>Real-time Updates</strong> - Changes reflect immediately</li>
+                            <li><strong>Interactive Elements</strong> - Clickable links and hover effects</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Template System Section -->
+            <section id="templates" class="docs-section">
+                <h2 class="section-title">Template System</h2>
+                
+                <p>Save time and maintain consistency with our powerful template system.</p>
+
+                <h3>Saving Templates</h3>
+                <ol class="docs-list">
+                    <li>Design your embed in the creator</li>
+                    <li>Click the <strong>"Save Template"</strong> button</li>
+                    <li>Enter a descriptive name for your template</li>
+                    <li>Click <strong>"Save"</strong> to store locally</li>
+                </ol>
+
+                <h3>Loading Templates</h3>
+                <ol class="docs-list">
+                    <li>Click the <strong>"Load Template"</strong> button</li>
+                    <li>Browse your saved templates</li>
+                    <li>Click on a template to load it instantly</li>
+                    <li>Modify as needed and save again</li>
+                </ol>
+
+                <div class="tip-box">
+                    <i class="fas fa-lightbulb"></i>
+                    <div>
+                        <h4>Pro Tip</h4>
+                        <p>Create templates for different purposes: announcements, events, alerts, and regular updates. This ensures brand consistency across your Discord server.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Best Practices Section -->
+            <section id="best-practices" class="docs-section">
+                <h2 class="section-title">Best Practices</h2>
+                
+                <div class="practices-grid">
+                    <div class="practice-card">
+                        <div class="practice-icon">
+                            <i class="fas fa-palette"></i>
+                        </div>
+                        <h3>Visual Design</h3>
+                        <ul>
+                            <li>Use consistent colors that match your brand</li>
+                            <li>Keep descriptions concise and scannable</li>
+                            <li>Use high-quality images with proper dimensions</li>
+                            <li>Maintain visual hierarchy with proper field organization</li>
+                        </ul>
+                    </div>
+
+                    <div class="practice-card">
+                        <div class="practice-icon">
+                            <i class="fas fa-align-left"></i>
+                        </div>
+                        <h3>Content Strategy</h3>
+                        <ul>
+                            <li>Write clear, actionable titles</li>
+                            <li>Use formatting to highlight important information</li>
+                            <li>Include relevant links and call-to-actions</li>
+                            <li>Test embeds before sending to large audiences</li>
+                        </ul>
+                    </div>
+
+                    <div class="practice-card">
+                        <div class="practice-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h3>Accessibility</h3>
+                        <ul>
+                            <li>Ensure text has sufficient contrast</li>
+                            <li>Use descriptive alt text for images</li>
+                            <li>Keep line lengths readable on mobile</li>
+                            <li>Test on different devices and screen sizes</li>
+                        </ul>
+                    </div>
+
+                    <div class="practice-card">
+                        <div class="practice-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3>Security</h3>
+                        <ul>
+                            <li>Never share webhook URLs publicly</li>
+                            <li>Regularly rotate webhook tokens</li>
+                            <li>Monitor webhook usage for suspicious activity</li>
+                            <li>Use HTTPS for all external links and images</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Support Section -->
+            <section id="support" class="docs-section">
+                <h2 class="section-title">Getting Support</h2>
+                
+                <div class="support-options">
+                    <div class="support-card">
+                        <div class="support-icon">
+                            <i class="fab fa-github"></i>
+                        </div>
+                        <h3>GitHub Issues</h3>
+                        <p>Report bugs, request features, or ask technical questions on our GitHub repository.</p>
+                        <a href="https://github.com/driizzyy/Webhook-Embed-Creator/issues" target="_blank" class="support-button">
+                            <i class="fas fa-external-link-alt"></i>
+                            Open Issue
+                        </a>
+                    </div>
+
+                    <div class="support-card">
+                        <div class="support-icon">
+                            <i class="fas fa-book"></i>
+                        </div>
+                        <h3>Documentation</h3>
+                        <p>Comprehensive guides and examples to help you master embed creation.</p>
+                        <a href="#overview" class="support-button">
+                            <i class="fas fa-arrow-up"></i>
+                            Back to Top
+                        </a>
+                    </div>
+
+                    <div class="support-card">
+                        <div class="support-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3>Examples</h3>
+                        <p>View real-world examples and templates for common use cases.</p>
+                        <a href="examples.html" class="support-button">
+                            <i class="fas fa-external-link-alt"></i>
+                            View Examples
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Table of Contents -->
+        <aside class="docs-toc">
+            <h4>On This Page</h4>
+            <nav class="toc-nav">
+                <!-- Dynamically populated -->
+            </nav>
+        </aside>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-json.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/docs.js"></script>
+</body>
+</html>

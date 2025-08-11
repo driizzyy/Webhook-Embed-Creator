@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Documentation - Discord Embed Creator</title>
+    <meta name="description" content="Complete API documentation for Discord webhook embeds. Learn how to integrate and automate embed creation.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/docs.css">
+    <link rel="stylesheet" href="css/api.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="API Documentation - Discord Embed Creator">
+    <meta property="og:description" content="Complete API documentation for Discord webhook embeds">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://driizzyy.github.io/Webhook-Embed-Creator/src/api.html">
+</head>
+<body class="api-body">
+    <!-- Navigation -->
+    <nav class="main-nav api-nav">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <a href="../index.html">
+                    <i class="fab fa-discord"></i>
+                    <span>Embed Creator</span>
+                </a>
+            </div>
+            
+            <div class="nav-links">
+                <a href="../index.html">Home</a>
+                <a href="creator.html">Creator</a>
+                <a href="docs.html">Docs</a>
+                <a href="examples.html">Examples</a>
+                <a href="api.html" class="active">API</a>
+                <a href="https://github.com/driizzyy/Webhook-Embed-Creator" target="_blank" rel="noopener">
+                    <i class="fab fa-github"></i>
+                    GitHub
+                </a>
+            </div>
+
+            <button class="theme-toggle" aria-label="Toggle theme">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="api-header">
+        <div class="container">
+            <div class="header-content">
+                <h1 class="header-title">
+                    <i class="fas fa-code"></i>
+                    API Documentation
+                </h1>
+                <p class="header-subtitle">
+                    Complete reference for Discord webhook embeds and automation
+                </p>
+                
+                <div class="header-badges">
+                    <span class="badge">REST API</span>
+                    <span class="badge">JSON Schema</span>
+                    <span class="badge">Rate Limited</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="api-main">
+        <div class="container">
+            <div class="api-container">
+                <!-- Sidebar -->
+                <aside class="api-sidebar">
+                    <div class="sidebar-header">
+                        <h3><i class="fas fa-terminal"></i> API Reference</h3>
+                    </div>
+                    
+                    <nav class="api-nav-menu">
+                        <div class="nav-section">
+                            <h4>Getting Started</h4>
+                            <ul>
+                                <li><a href="#introduction" class="nav-item active">Introduction</a></li>
+                                <li><a href="#authentication" class="nav-item">Authentication</a></li>
+                                <li><a href="#rate-limits" class="nav-item">Rate Limits</a></li>
+                                <li><a href="#errors" class="nav-item">Error Handling</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="nav-section">
+                            <h4>Webhook Endpoints</h4>
+                            <ul>
+                                <li><a href="#execute-webhook" class="nav-item">Execute Webhook</a></li>
+                                <li><a href="#get-webhook" class="nav-item">Get Webhook</a></li>
+                                <li><a href="#modify-webhook" class="nav-item">Modify Webhook</a></li>
+                                <li><a href="#delete-webhook" class="nav-item">Delete Webhook</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="nav-section">
+                            <h4>Embed Objects</h4>
+                            <ul>
+                                <li><a href="#embed-structure" class="nav-item">Embed Structure</a></li>
+                                <li><a href="#embed-author" class="nav-item">Author Object</a></li>
+                                <li><a href="#embed-fields" class="nav-item">Field Objects</a></li>
+                                <li><a href="#embed-footer" class="nav-item">Footer Object</a></li>
+                                <li><a href="#embed-media" class="nav-item">Media Objects</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="nav-section">
+                            <h4>Advanced</h4>
+                            <ul>
+                                <li><a href="#components" class="nav-item">Components</a></li>
+                                <li><a href="#interactions" class="nav-item">Interactions</a></li>
+                                <li><a href="#webhooks-advanced" class="nav-item">Advanced Webhooks</a></li>
+                                <li><a href="#best-practices" class="nav-item">Best Practices</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="nav-section">
+                            <h4>SDKs & Libraries</h4>
+                            <ul>
+                                <li><a href="#javascript-sdk" class="nav-item">JavaScript SDK</a></li>
+                                <li><a href="#python-sdk" class="nav-item">Python SDK</a></li>
+                                <li><a href="#community-libs" class="nav-item">Community Libraries</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+                </aside>
+
+                <!-- Main Content -->
+                <div class="api-content">
+                    <!-- Introduction -->
+                    <section id="introduction" class="api-section">
+                        <div class="section-header">
+                            <h2>Introduction</h2>
+                            <p>Welcome to the Discord Webhook API documentation. Learn how to send rich embeds to Discord channels using webhooks.</p>
+                        </div>
+                        
+                        <div class="intro-grid">
+                            <div class="intro-card">
+                                <div class="intro-icon">
+                                    <i class="fas fa-rocket"></i>
+                                </div>
+                                <h3>Quick Start</h3>
+                                <p>Get up and running with webhook embeds in minutes</p>
+                            </div>
+                            <div class="intro-card">
+                                <div class="intro-icon">
+                                    <i class="fas fa-shield-alt"></i>
+                                </div>
+                                <h3>Secure</h3>
+                                <p>Built-in rate limiting and validation</p>
+                            </div>
+                            <div class="intro-card">
+                                <div class="intro-icon">
+                                    <i class="fas fa-puzzle-piece"></i>
+                                </div>
+                                <h3>Flexible</h3>
+                                <p>Support for complex embed structures</p>
+                            </div>
+                        </div>
+
+                        <div class="quick-example">
+                            <h3>Quick Example</h3>
+                            <div class="code-block">
+                                <code class="language-javascript">
+// Simple webhook execution
+const webhook = {
+    username: "Embed Creator",
+    avatar_url: "https://example.com/avatar.png",
+    embeds: [{
+        title: "Hello World!",
+        description: "This is my first webhook embed",
+        color: 0x5865F2,
+        timestamp: new Date().toISOString()
+    }]
+};
+
+fetch('YOUR_WEBHOOK_URL', {
+    method: 'POST',
+    headers: {
+        'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(webhook)
+});
+                                </code>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Authentication -->
+                    <section id="authentication" class="api-section">
+                        <h2>Authentication</h2>
+                        <p>Discord webhooks don't require traditional authentication. Instead, they use unique URLs that contain the webhook ID and token.</p>
+                        
+                        <div class="auth-info">
+                            <div class="info-box">
+                                <div class="info-icon">
+                                    <i class="fas fa-info-circle"></i>
+                                </div>
+                                <div class="info-content">
+                                    <h4>Webhook URL Structure</h4>
+                                    <p>Webhook URLs follow this pattern:</p>
+                                    <code>https://discord.com/api/webhooks/{webhook.id}/{webhook.token}</code>
+                                </div>
+                            </div>
+                            
+                            <div class="warning-box">
+                                <div class="warning-icon">
+                                    <i class="fas fa-exclamation-triangle"></i>
+                                </div>
+                                <div class="warning-content">
+                                    <h4>Security Notice</h4>
+                                    <p>Keep your webhook URLs private! Anyone with the URL can send messages to your channel.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Rate Limits -->
+                    <section id="rate-limits" class="api-section">
+                        <h2>Rate Limits</h2>
+                        <p>Discord enforces rate limits to ensure fair usage and prevent spam.</p>
+                        
+                        <div class="rate-limits-table">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Endpoint</th>
+                                        <th>Rate Limit</th>
+                                        <th>Bucket</th>
+                                        <th>Reset</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Execute Webhook</td>
+                                        <td>5 requests per 2 seconds</td>
+                                        <td>Per webhook</td>
+                                        <td>2 seconds</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Get/Modify Webhook</td>
+                                        <td>10 requests per 10 seconds</td>
+                                        <td>Per webhook</td>
+                                        <td>10 seconds</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Global Rate Limit</td>
+                                        <td>50 requests per second</td>
+                                        <td>Per IP</td>
+                                        <td>1 second</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="code-example">
+                            <h3>Handling Rate Limits</h3>
+                            <div class="code-block">
+                                <code class="language-javascript">
+async function executeWebhook(url, data) {
+    const response = await fetch(url, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data)
+    });
+
+    if (response.status === 429) {
+        const retryAfter = response.headers.get('Retry-After');
+        console.log(`Rate limited! Retry after ${retryAfter}ms`);
+        
+        await new Promise(resolve => setTimeout(resolve, retryAfter));
+        return executeWebhook(url, data); // Retry
+    }
+
+    return response;
+}
+                                </code>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Execute Webhook -->
+                    <section id="execute-webhook" class="api-section">
+                        <h2>Execute Webhook</h2>
+                        <p>Send a message to a Discord channel through a webhook.</p>
+                        
+                        <div class="endpoint-card">
+                            <div class="endpoint-header">
+                                <span class="method post">POST</span>
+                                <code>/webhooks/{webhook.id}/{webhook.token}</code>
+                            </div>
+                            
+                            <div class="endpoint-content">
+                                <h4>Parameters</h4>
+                                <div class="params-table">
+                                    <div class="param-row">
+                                        <div class="param-name">content</div>
+                                        <div class="param-type">string</div>
+                                        <div class="param-desc">Message content (up to 2000 characters)</div>
+                                    </div>
+                                    <div class="param-row">
+                                        <div class="param-name">username</div>
+                                        <div class="param-type">string</div>
+                                        <div class="param-desc">Override default username</div>
+                                    </div>
+                                    <div class="param-row">
+                                        <div class="param-name">avatar_url</div>
+                                        <div class="param-type">string</div>
+                                        <div class="param-desc">Override default avatar</div>
+                                    </div>
+                                    <div class="param-row">
+                                        <div class="param-name">embeds</div>
+                                        <div class="param-type">array</div>
+                                        <div class="param-desc">Array of embed objects (max 10)</div>
+                                    </div>
+                                    <div class="param-row">
+                                        <div class="param-name">components</div>
+                                        <div class="param-type">array</div>
+                                        <div class="param-desc">Array of component objects</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="code-example">
+                            <h3>Example Request</h3>
+                            <div class="code-block">
+                                <code class="language-json">
+{
+    "username": "Custom Bot",
+    "avatar_url": "https://example.com/avatar.png",
+    "content": "Hello from webhook!",
+    "embeds": [{
+        "title": "Announcement",
+        "description": "This is an important update",
+        "color": 0x5865F2,
+        "fields": [{
+            "name": "Field Name",
+            "value": "Field Value",
+            "inline": false
+        }],
+        "footer": {
+            "text": "Footer text",
+            "icon_url": "https://example.com/footer.png"
+        },
+        "timestamp": "2024-01-01T00:00:00.000Z"
+    }]
+}
+                                </code>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Embed Structure -->
+                    <section id="embed-structure" class="api-section">
+                        <h2>Embed Structure</h2>
+                        <p>Discord embeds are rich content boxes that can contain various types of information.</p>
+                        
+                        <div class="structure-visual">
+                            <div class="embed-demo">
+                                <div class="embed-parts">
+                                    <div class="embed-part" data-part="author">
+                                        <div class="embed-author-demo">
+                                            <img src="https://via.placeholder.com/20" alt="Author"> Author Name
+                                        </div>
+                                        <div class="part-label">Author</div>
+                                    </div>
+                                    <div class="embed-part" data-part="title">
+                                        <div class="embed-title-demo">Embed Title</div>
+                                        <div class="part-label">Title</div>
+                                    </div>
+                                    <div class="embed-part" data-part="description">
+                                        <div class="embed-description-demo">This is the embed description with **markdown** support.</div>
+                                        <div class="part-label">Description</div>
+                                    </div>
+                                    <div class="embed-part" data-part="fields">
+                                        <div class="embed-fields-demo">
+                                            <div class="field-demo">
+                                                <strong>Field Name</strong><br>
+                                                Field Value
+                                            </div>
+                                        </div>
+                                        <div class="part-label">Fields</div>
+                                    </div>
+                                    <div class="embed-part" data-part="footer">
+                                        <div class="embed-footer-demo">
+                                            <img src="https://via.placeholder.com/16" alt="Footer"> Footer Text
+                                        </div>
+                                        <div class="part-label">Footer</div>
+                                    </div>
+                                </div>
+                                <div class="embed-thumbnail-demo">
+                                    <img src="https://via.placeholder.com/80" alt="Thumbnail">
+                                    <div class="part-label">Thumbnail</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="structure-table">
+                            <h3>Embed Object Properties</h3>
+                            <div class="props-table">
+                                <div class="prop-row">
+                                    <div class="prop-name">title</div>
+                                    <div class="prop-type">string</div>
+                                    <div class="prop-limit">256 chars</div>
+                                    <div class="prop-desc">Title of embed</div>
+                                </div>
+                                <div class="prop-row">
+                                    <div class="prop-name">description</div>
+                                    <div class="prop-type">string</div>
+                                    <div class="prop-limit">4096 chars</div>
+                                    <div class="prop-desc">Description of embed</div>
+                                </div>
+                                <div class="prop-row">
+                                    <div class="prop-name">url</div>
+                                    <div class="prop-type">string</div>
+                                    <div class="prop-limit">-</div>
+                                    <div class="prop-desc">URL of embed</div>
+                                </div>
+                                <div class="prop-row">
+                                    <div class="prop-name">timestamp</div>
+                                    <div class="prop-type">ISO8601</div>
+                                    <div class="prop-limit">-</div>
+                                    <div class="prop-desc">Timestamp of embed content</div>
+                                </div>
+                                <div class="prop-row">
+                                    <div class="prop-name">color</div>
+                                    <div class="prop-type">integer</div>
+                                    <div class="prop-limit">-</div>
+                                    <div class="prop-desc">Color code of the embed</div>
+                                </div>
+                                <div class="prop-row">
+                                    <div class="prop-name">footer</div>
+                                    <div class="prop-type">object</div>
+                                    <div class="prop-limit">-</div>
+                                    <div class="prop-desc">Footer information</div>
+                                </div>
+                                <div class="prop-row">
+                                    <div class="prop-name">image</div>
+                                    <div class="prop-type">object</div>
+                                    <div class="prop-limit">-</div>
+                                    <div class="prop-desc">Image information</div>
+                                </div>
+                                <div class="prop-row">
+                                    <div class="prop-name">thumbnail</div>
+                                    <div class="prop-type">object</div>
+                                    <div class="prop-limit">-</div>
+                                    <div class="prop-desc">Thumbnail information</div>
+                                </div>
+                                <div class="prop-row">
+                                    <div class="prop-name">author</div>
+                                    <div class="prop-type">object</div>
+                                    <div class="prop-limit">-</div>
+                                    <div class="prop-desc">Author information</div>
+                                </div>
+                                <div class="prop-row">
+                                    <div class="prop-name">fields</div>
+                                    <div class="prop-type">array</div>
+                                    <div class="prop-limit">25 fields</div>
+                                    <div class="prop-desc">Fields information</div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Best Practices -->
+                    <section id="best-practices" class="api-section">
+                        <h2>Best Practices</h2>
+                        <p>Follow these guidelines to create effective and user-friendly webhook embeds.</p>
+                        
+                        <div class="practices-grid">
+                            <div class="practice-card">
+                                <div class="practice-icon">
+                                    <i class="fas fa-palette"></i>
+                                </div>
+                                <h3>Design</h3>
+                                <ul>
+                                    <li>Use consistent colors across your embeds</li>
+                                    <li>Keep titles concise and descriptive</li>
+                                    <li>Use fields for structured data</li>
+                                    <li>Include timestamps for time-sensitive content</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="practice-card">
+                                <div class="practice-icon">
+                                    <i class="fas fa-tachometer-alt"></i>
+                                </div>
+                                <h3>Performance</h3>
+                                <ul>
+                                    <li>Respect rate limits to avoid throttling</li>
+                                    <li>Batch multiple embeds when possible</li>
+                                    <li>Cache webhook URLs securely</li>
+                                    <li>Implement retry logic for failed requests</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="practice-card">
+                                <div class="practice-icon">
+                                    <i class="fas fa-shield-alt"></i>
+                                </div>
+                                <h3>Security</h3>
+                                <ul>
+                                    <li>Never expose webhook URLs publicly</li>
+                                    <li>Validate all input data</li>
+                                    <li>Use HTTPS for all requests</li>
+                                    <li>Rotate webhook URLs periodically</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="practice-card">
+                                <div class="practice-icon">
+                                    <i class="fas fa-users"></i>
+                                </div>
+                                <h3>User Experience</h3>
+                                <ul>
+                                    <li>Provide clear and actionable content</li>
+                                    <li>Use mentions sparingly</li>
+                                    <li>Include relevant links and resources</li>
+                                    <li>Test embeds before deployment</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <!-- Table of Contents -->
+                <aside class="api-toc">
+                    <h4>On This Page</h4>
+                    <nav class="toc-nav">
+                        <a href="#introduction">Introduction</a>
+                        <a href="#authentication">Authentication</a>
+                        <a href="#rate-limits">Rate Limits</a>
+                        <a href="#execute-webhook">Execute Webhook</a>
+                        <a href="#embed-structure">Embed Structure</a>
+                        <a href="#best-practices">Best Practices</a>
+                    </nav>
+                </aside>
+            </div>
+        </div>
+    </main>
+
+    <!-- Scripts -->
+    <script src="js/docs.js"></script>
+    <script src="js/api.js"></script>
+</body>
+</html>
