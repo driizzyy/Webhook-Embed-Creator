@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examples - Discord Embed Creator</title>
+    <meta name="description" content="Real-world examples and templates for Discord embeds. Learn from proven embed designs and copy ready-to-use templates.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/examples.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Examples - Discord Embed Creator">
+    <meta property="og:description" content="Real-world examples and templates for Discord embeds">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://driizzyy.github.io/Webhook-Embed-Creator/src/examples.html">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Examples - Discord Embed Creator">
+    <meta name="twitter:description" content="Real-world examples and templates for Discord embeds">
+</head>
+<body class="examples-body">
+    <!-- Navigation -->
+    <nav class="main-nav examples-nav">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <a href="../index.html">
+                    <i class="fab fa-discord"></i>
+                    <span>Embed Creator</span>
+                </a>
+            </div>
+            
+            <div class="nav-links">
+                <a href="../index.html">Home</a>
+                <a href="creator.html">Creator</a>
+                <a href="docs.html">Docs</a>
+                <a href="examples.html" class="active">Examples</a>
+                <a href="https://github.com/driizzyy/Webhook-Embed-Creator" target="_blank" rel="noopener">
+                    <i class="fab fa-github"></i>
+                    GitHub
+                </a>
+            </div>
+
+            <button class="theme-toggle" aria-label="Toggle theme">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="examples-header">
+        <div class="container">
+            <div class="header-content">
+                <h1 class="header-title">
+                    <i class="fas fa-star"></i>
+                    Embed Examples & Templates
+                </h1>
+                <p class="header-subtitle">
+                    Discover professional embed designs and copy ready-to-use templates for your Discord server
+                </p>
+                
+                <div class="header-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">50+</div>
+                        <div class="stat-label">Templates</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">8</div>
+                        <div class="stat-label">Categories</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">100%</div>
+                        <div class="stat-label">Free</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="examples-main">
+        <div class="container">
+            <!-- Filter Bar -->
+            <div class="filter-bar">
+                <div class="filter-tabs">
+                    <button class="filter-tab active" data-category="all">
+                        <i class="fas fa-th"></i>
+                        All Templates
+                    </button>
+                    <button class="filter-tab" data-category="announcements">
+                        <i class="fas fa-bullhorn"></i>
+                        Announcements
+                    </button>
+                    <button class="filter-tab" data-category="welcome">
+                        <i class="fas fa-hand-wave"></i>
+                        Welcome
+                    </button>
+                    <button class="filter-tab" data-category="gaming">
+                        <i class="fas fa-gamepad"></i>
+                        Gaming
+                    </button>
+                    <button class="filter-tab" data-category="music">
+                        <i class="fas fa-music"></i>
+                        Music
+                    </button>
+                    <button class="filter-tab" data-category="events">
+                        <i class="fas fa-calendar"></i>
+                        Events
+                    </button>
+                    <button class="filter-tab" data-category="support">
+                        <i class="fas fa-headset"></i>
+                        Support
+                    </button>
+                    <button class="filter-tab" data-category="social">
+                        <i class="fas fa-users"></i>
+                        Social
+                    </button>
+                    <button class="filter-tab" data-category="business">
+                        <i class="fas fa-briefcase"></i>
+                        Business
+                    </button>
+                </div>
+                
+                <div class="filter-search">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search templates..." class="search-input">
+                </div>
+            </div>
+
+            <!-- Examples Grid -->
+            <div class="examples-grid" id="examplesGrid">
+                <!-- Announcement Examples -->
+                <div class="example-card" data-category="announcements">
+                    <div class="example-preview">
+                        <div class="discord-embed announcement-embed">
+                            <div class="embed-content">
+                                <div class="embed-author">
+                                    <img src="https://cdn.discordapp.com/emojis/741243686352773171.png" alt="Announcement">
+                                    <span>Server Announcements</span>
+                                </div>
+                                <div class="embed-title">🎉 New Features Released!</div>
+                                <div class="embed-description">
+                                    We're excited to announce some amazing new features that will enhance your Discord experience:
+                                    
+                                    **✨ What's New:**
+                                    • Enhanced moderation tools
+                                    • Custom role colors
+                                    • Improved voice quality
+                                    • New emoji packs
+                                </div>
+                                <div class="embed-fields">
+                                    <div class="embed-field">
+                                        <div class="field-name">Release Date</div>
+                                        <div class="field-value">Today, 3:00 PM EST</div>
+                                    </div>
+                                    <div class="embed-field">
+                                        <div class="field-name">Next Update</div>
+                                        <div class="field-value">Coming Next Week</div>
+                                    </div>
+                                </div>
+                                <div class="embed-footer">
+                                    <img src="https://cdn.discordapp.com/emojis/771417304013381632.png" alt="Footer">
+                                    <span>Version 2.1.0 • Today at 3:00 PM</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="example-info">
+                        <h3>Feature Announcement</h3>
+                        <p>Professional announcement template for new features and updates</p>
+                        <div class="example-tags">
+                            <span class="tag">Announcements</span>
+                            <span class="tag">Updates</span>
+                        </div>
+                        <div class="example-actions">
+                            <button class="btn-preview" data-example="announcement">
+                                <i class="fas fa-eye"></i>
+                                Preview
+                            </button>
+                            <button class="btn-copy" data-example="announcement">
+                                <i class="fas fa-copy"></i>
+                                Copy JSON
+                            </button>
+                            <button class="btn-use" data-example="announcement">
+                                <i class="fas fa-magic"></i>
+                                Use Template
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Welcome Example -->
+                <div class="example-card" data-category="welcome">
+                    <div class="example-preview">
+                        <div class="discord-embed welcome-embed">
+                            <div class="embed-content">
+                                <div class="embed-author">
+                                    <img src="https://cdn.discordapp.com/emojis/753618635296882819.png" alt="Welcome">
+                                    <span>Welcome Committee</span>
+                                </div>
+                                <div class="embed-title">🎊 Welcome to our awesome server!</div>
+                                <div class="embed-description">
+                                    Hey there **{user}**! We're thrilled to have you join our community of amazing people.
+                                    
+                                    🌟 **Get started by:**
+                                    • Reading our <#rules> channel
+                                    • Introducing yourself in <#introductions>
+                                    • Checking out <#announcements> for updates
+                                    
+                                    Need help? Just ping our friendly <@&moderator> team!
+                                </div>
+                                <div class="embed-thumbnail">
+                                    <img src="https://cdn.discordapp.com/emojis/797137583751725116.png" alt="Welcome">
+                                </div>
+                                <div class="embed-footer">
+                                    <img src="https://cdn.discordapp.com/emojis/784104335031771146.png" alt="Server">
+                                    <span>Member #1,337 • Welcome to the community!</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="example-info">
+                        <h3>Welcome Message</h3>
+                        <p>Warm welcome template for new server members</p>
+                        <div class="example-tags">
+                            <span class="tag">Welcome</span>
+                            <span class="tag">Community</span>
+                        </div>
+                        <div class="example-actions">
+                            <button class="btn-preview" data-example="welcome">
+                                <i class="fas fa-eye"></i>
+                                Preview
+                            </button>
+                            <button class="btn-copy" data-example="welcome">
+                                <i class="fas fa-copy"></i>
+                                Copy JSON
+                            </button>
+                            <button class="btn-use" data-example="welcome">
+                                <i class="fas fa-magic"></i>
+                                Use Template
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gaming Example -->
+                <div class="example-card" data-category="gaming">
+                    <div class="example-preview">
+                        <div class="discord-embed gaming-embed">
+                            <div class="embed-content">
+                                <div class="embed-author">
+                                    <img src="https://cdn.discordapp.com/emojis/799310033928159282.png" alt="Gaming">
+                                    <span>Gaming Hub</span>
+                                </div>
+                                <div class="embed-title">🎮 Tournament Results - Winter Championship</div>
+                                <div class="embed-description">
+                                    The Winter Championship has concluded! Congratulations to all participants for an amazing tournament.
+                                </div>
+                                <div class="embed-fields">
+                                    <div class="embed-field">
+                                        <div class="field-name">🥇 1st Place</div>
+                                        <div class="field-value">Team Lightning ⚡</div>
+                                    </div>
+                                    <div class="embed-field">
+                                        <div class="field-name">🥈 2nd Place</div>
+                                        <div class="field-value">Storm Riders 🌪️</div>
+                                    </div>
+                                    <div class="embed-field">
+                                        <div class="field-name">🥉 3rd Place</div>
+                                        <div class="field-value">Phoenix Squad 🔥</div>
+                                    </div>
+                                    <div class="embed-field">
+                                        <div class="field-name">Prize Pool</div>
+                                        <div class="field-value">$2,500 USD</div>
+                                    </div>
+                                    <div class="embed-field">
+                                        <div class="field-name">Participants</div>
+                                        <div class="field-value">64 Teams</div>
+                                    </div>
+                                    <div class="embed-field">
+                                        <div class="field-name">Duration</div>
+                                        <div class="field-value">2 Weeks</div>
+                                    </div>
+                                </div>
+                                <div class="embed-footer">
+                                    <img src="https://cdn.discordapp.com/emojis/784104335031771146.png" alt="Tournament">
+                                    <span>Tournament Series • Season 3</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="example-info">
+                        <h3>Tournament Results</h3>
+                        <p>Professional gaming tournament results announcement</p>
+                        <div class="example-tags">
+                            <span class="tag">Gaming</span>
+                            <span class="tag">Tournament</span>
+                            <span class="tag">Results</span>
+                        </div>
+                        <div class="example-actions">
+                            <button class="btn-preview" data-example="gaming">
+                                <i class="fas fa-eye"></i>
+                                Preview
+                            </button>
+                            <button class="btn-copy" data-example="gaming">
+                                <i class="fas fa-copy"></i>
+                                Copy JSON
+                            </button>
+                            <button class="btn-use" data-example="gaming">
+                                <i class="fas fa-magic"></i>
+                                Use Template
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Music Example -->
+                <div class="example-card" data-category="music">
+                    <div class="example-preview">
+                        <div class="discord-embed music-embed">
+                            <div class="embed-content">
+                                <div class="embed-author">
+                                    <img src="https://cdn.discordapp.com/emojis/768479012075798558.png" alt="Music">
+                                    <span>Now Playing</span>
+                                </div>
+                                <div class="embed-title">🎵 Bohemian Rhapsody</div>
+                                <div class="embed-description">
+                                    **Artist:** Queen
+                                    **Album:** A Night at the Opera
+                                    **Duration:** 5:55
+                                    **Year:** 1975
+                                    
+                                    ▬▬▬▬▬▬🔘▬▬▬ 2:34 / 5:55
+                                    
+                                    🔊 **Volume:** 85%
+                                    🔀 **Queue:** 12 songs remaining
+                                </div>
+                                <div class="embed-thumbnail">
+                                    <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=150&h=150&fit=crop" alt="Album">
+                                </div>
+                                <div class="embed-fields">
+                                    <div class="embed-field">
+                                        <div class="field-name">Requested by</div>
+                                        <div class="field-value">@MusicLover#1234</div>
+                                    </div>
+                                    <div class="embed-field">
+                                        <div class="field-name">Voice Channel</div>
+                                        <div class="field-value">🎧 Music Lounge</div>
+                                    </div>
+                                </div>
+                                <div class="embed-footer">
+                                    <img src="https://cdn.discordapp.com/emojis/768479012075798558.png" alt="Music Bot">
+                                    <span>MusicBot • Use /skip to change song</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="example-info">
+                        <h3>Now Playing</h3>
+                        <p>Music bot now playing embed with track information</p>
+                        <div class="example-tags">
+                            <span class="tag">Music</span>
+                            <span class="tag">Bot</span>
+                            <span class="tag">Player</span>
+                        </div>
+                        <div class="example-actions">
+                            <button class="btn-preview" data-example="music">
+                                <i class="fas fa-eye"></i>
+                                Preview
+                            </button>
+                            <button class="btn-copy" data-example="music">
+                                <i class="fas fa-copy"></i>
+                                Copy JSON
+                            </button>
+                            <button class="btn-use" data-example="music">
+                                <i class="fas fa-magic"></i>
+                                Use Template
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Event Example -->
+                <div class="example-card" data-category="events">
+                    <div class="example-preview">
+                        <div class="discord-embed event-embed">
+                            <div class="embed-content">
+                                <div class="embed-author">
+                                    <img src="https://cdn.discordapp.com/emojis/785665532977537035.png" alt="Event">
+                                    <span>Community Events</span>
+                                </div>
+                                <div class="embed-title">🎪 Annual Community Festival 2024</div>
+                                <div class="embed-description">
+                                    Join us for our biggest community event of the year! We have exciting activities, giveaways, and special guests lined up.
+                                    
+                                    **🎁 What to Expect:**
+                                    • Live streaming sessions
+                                    • Community games and competitions
+                                    • Exclusive merchandise giveaways
+                                    • Meet & greet with special guests
+                                    • Art showcase and contests
+                                </div>
+                                <div class="embed-fields">
+                                    <div class="embed-field">
+                                        <div class="field-name">📅 Date</div>
+                                        <div class="field-value">March 15-17, 2024</div>
+                                    </div>
+                                    <div class="embed-field">
+                                        <div class="field-name">⏰ Time</div>
+                                        <div class="field-value">12:00 PM - 10:00 PM EST</div>
+                                    </div>
+                                    <div class="embed-field">
+                                        <div class="field-name">🎟️ Registration</div>
+                                        <div class="field-value">Free - React with 🎉</div>
+                                    </div>
+                                </div>
+                                <div class="embed-footer">
+                                    <img src="https://cdn.discordapp.com/emojis/785665532977537035.png" alt="Festival">
+                                    <span>Community Festival • Don't miss out!</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="example-info">
+                        <h3>Community Event</h3>
+                        <p>Engaging event announcement with all essential details</p>
+                        <div class="example-tags">
+                            <span class="tag">Events</span>
+                            <span class="tag">Community</span>
+                            <span class="tag">Festival</span>
+                        </div>
+                        <div class="example-actions">
+                            <button class="btn-preview" data-example="event">
+                                <i class="fas fa-eye"></i>
+                                Preview
+                            </button>
+                            <button class="btn-copy" data-example="event">
+                                <i class="fas fa-copy"></i>
+                                Copy JSON
+                            </button>
+                            <button class="btn-use" data-example="event">
+                                <i class="fas fa-magic"></i>
+                                Use Template
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Support Example -->
+                <div class="example-card" data-category="support">
+                    <div class="example-preview">
+                        <div class="discord-embed support-embed">
+                            <div class="embed-content">
+                                <div class="embed-author">
+                                    <img src="https://cdn.discordapp.com/emojis/768128709558018059.png" alt="Support">
+                                    <span>Support Team</span>
+                                </div>
+                                <div class="embed-title">🎧 Need Help? We're Here for You!</div>
+                                <div class="embed-description">
+                                    Our support team is ready to assist you with any questions or issues you might have.
+                                    
+                                    **💡 Quick Solutions:**
+                                    • Check our <#faq> channel first
+                                    • Use `/help` command for bot issues
+                                    • Search our knowledge base
+                                    
+                                    **📞 Contact Options:**
+                                    • Create a support ticket: `/ticket`
+                                    • DM a <@&support> team member
+                                    • Email: support@example.com
+                                </div>
+                                <div class="embed-fields">
+                                    <div class="embed-field">
+                                        <div class="field-name">🕐 Response Time</div>
+                                        <div class="field-value">< 2 hours</div>
+                                    </div>
+                                    <div class="embed-field">
+                                        <div class="field-name">📊 Ticket Status</div>
+                                        <div class="field-value">3 pending</div>
+                                    </div>
+                                    <div class="embed-field">
+                                        <div class="field-name">⭐ Satisfaction</div>
+                                        <div class="field-value">98.5%</div>
+                                    </div>
+                                </div>
+                                <div class="embed-footer">
+                                    <img src="https://cdn.discordapp.com/emojis/768128709558018059.png" alt="Support">
+                                    <span>Support Desk • Available 24/7</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="example-info">
+                        <h3>Support Information</h3>
+                        <p>Comprehensive support information with contact options</p>
+                        <div class="example-tags">
+                            <span class="tag">Support</span>
+                            <span class="tag">Help</span>
+                            <span class="tag">Contact</span>
+                        </div>
+                        <div class="example-actions">
+                            <button class="btn-preview" data-example="support">
+                                <i class="fas fa-eye"></i>
+                                Preview
+                            </button>
+                            <button class="btn-copy" data-example="support">
+                                <i class="fas fa-copy"></i>
+                                Copy JSON
+                            </button>
+                            <button class="btn-use" data-example="support">
+                                <i class="fas fa-magic"></i>
+                                Use Template
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Load More -->
+            <div class="load-more-container">
+                <button class="load-more-btn">
+                    <i class="fas fa-plus"></i>
+                    Load More Templates
+                </button>
+                <p class="load-more-text">Showing 6 of 50+ templates</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Preview Modal -->
+    <div class="preview-modal" id="previewModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Template Preview</h3>
+                <button class="close-modal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="preview-container" id="previewContainer">
+                    <!-- Preview content will be inserted here -->
+                </div>
+                <div class="modal-actions">
+                    <button class="btn-copy-modal">
+                        <i class="fas fa-copy"></i>
+                        Copy JSON
+                    </button>
+                    <button class="btn-edit-modal">
+                        <i class="fas fa-edit"></i>
+                        Edit in Creator
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Container -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <!-- Scripts -->
+    <script src="js/examples.js"></script>
+</body>
+</html>

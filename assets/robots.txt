@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://driizzyy.github.io/Webhook-Embed-Creator/sitemap.xml
